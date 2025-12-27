@@ -12,7 +12,8 @@ export const uploadImage = async (req, res) => {
     
     const image = await Image.create({
       title: title || 'Untitled', 
-      url: fileUrl 
+      url: fileUrl,
+      category: req.body.category || 'gallery'
     });
 
     res.status(201).json(image);
