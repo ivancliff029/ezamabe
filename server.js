@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 import app from "./app.js";
 import dotenv from "dotenv";
 dotenv.config();
+import cors from "cors";
+
+const cors = require("cors");
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
